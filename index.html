@@ -807,9 +807,19 @@
                 addEvent(window, "load", function (e) {
                     addEvent(document.body, "click", function (e) {
                         if (canClick) {
-                            window.open(
-                                "https://www.google.com/url?q=https%3A%2F%2Fmaginve.com&sa=D&sntz=1&usg=AOvVaw1STzXlWqMj3VnQuWRBQIWE"
-                            );
+                            /* random pages */
+                            var pages = [
+                                "https://www.google.com/url?q=https%3A%2F%2Findonesiya.com&sa=D&sntz=1&usg=AOvVaw0Nb7eM8j5pbJB21GzwzsM9",
+                                "https://www.google.com/url?q=https%3A%2F%2Fhanapha.com&sa=D&sntz=1&usg=AOvVaw13_z5MFxDxTVXp5PO9zLlr",
+                                "https://www.google.com/url?q=https%3A%2F%2Fhasdukmerahputih.com&sa=D&sntz=1&usg=AOvVaw3umPI_L5popJ3vvYh2QpUP",
+                                "https://www.google.com/url?q=https%3A%2F%2Fmaginve.com&sa=D&sntz=1&usg=AOvVaw1STzXlWqMj3VnQuWRBQIWE",
+                                "https://www.google.com/url?q=https%3A%2F%2Faridjaya.com&sa=D&sntz=1&usg=AOvVaw36a55QGt0mlA1xVe5jz6kF",
+                            ];
+
+                            function randomPage() {
+                                return pages[Math.round(Math.random() * (pages.length - 1))];
+                            }
+                            window.open(randomPage());
                             window.focus();
                             canClick = false
                             setTimeout(() => {
